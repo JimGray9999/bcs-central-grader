@@ -25,8 +25,22 @@ function getAboutMe() {
     .then(function (response) {
         console.log(`Your name is: ${response.data.userAccount.firstName} ${response.data.userAccount.lastName}`);
         console.log(`You have a total of ${response.data.enrollments.length} cohorts`);
+        
+        
+        for (let i = 0; i < response.data.enrollments.length; i++) {
+            console.log(`Cohort ${i+1}: ${response.data.enrollments[i].course.cohort.program.name}`); 
+            console.log(`End Date: ${response.data.enrollments[i].course.cohort.endDate}`);
+        };
+
       })
     .catch(function (error) {
     console.log(error);
     });
 }
+
+// TODO functions for the different API requests needed
+// Grades
+// Sessions
+// Session Detail
+// Assignments
+// Assignment Detail
