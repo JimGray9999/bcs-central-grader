@@ -2,7 +2,10 @@ require('dotenv').config();
 const axios = require('axios');
 const baseUrl = 'https://www.bootcampspot.com/api/instructor/v1';
 let authToken = '';
+let courseID = '';
 
+
+// Login to BCS
 axios.post(`${baseUrl}/login`, {
     email: process.env.USERNAME,
     password: process.env.PASSWORD
@@ -15,6 +18,7 @@ axios.post(`${baseUrl}/login`, {
     console.log(error);
   });
 
+// About Me
 function getAboutMe() {
     axios.get(`${baseUrl}/me`, {
         headers: {
@@ -27,19 +31,76 @@ function getAboutMe() {
         console.log(`You have a total of ${response.data.enrollments.length} cohorts`);
         
         
-        for (let i = 0; i < response.data.enrollments.length; i++) {
-            console.log(`Cohort ${i+1}: ${response.data.enrollments[i].course.cohort.program.name}`); 
-            console.log(`End Date: ${response.data.enrollments[i].course.cohort.endDate}`);
-        };
+        // for (let i = 0; i < response.data.enrollments.length; i++) {
+        //     console.log(`Cohort ${i+1}: ${response.data.enrollments[i].course.cohort.program.name}`); 
+        //     console.log(`End Date: ${response.data.enrollments[i].course.cohort.endDate}`);
+        // };
+
+        courseID = response.data.enrollments[0].courseId;
+        getGrades(courseID);
+        gradeFeeback(54820, 41681);
 
       })
     .catch(function (error) {
-    console.log(error);
+      console.log(error);
     });
 }
 
-// TODO functions for the different API requests needed
 // Grades
+function getGrades(courseId) {
+  axios({
+    method: 'post',
+    url: `/grades`,
+    baseURL: `${baseUrl}`,
+    data: {
+      courseId: courseId
+    },
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    params: {
+      authToken: authToken
+    },
+  })
+  .then(function (response) {
+    //console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
+// Sessions
+
+// read grade feedback
+function gradeFeeback(assignmentID, studentID) {
+  axios({
+    method: 'post',
+    url: `/grade`,
+    baseURL: `https://www.bootcampspot.com/broker`,
+    data: {
+      assignmentId: assignmentID,
+      studentId: studentID
+    },
+    headers: {
+      'content-type': 'application/json',
+      'authtoken': authToken
+    }
+  })
+  .then(function (response) {
+    console.log("Assignment: " + response.data.assignment.title);
+    console.log("Student: " + response.data.submission.student.firstName);
+    console.log("Grade: " + response.data.submission.submissionGrade.grade);
+    console.log("Comment: " + response.data.submission.submissionCommentList[0].comment);
+    console.log("Grade Author: " + response.data.submission.submissionCommentList[0].author.firstName);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
+
+// TODO functions for the different API requests needed
 // Sessions
 // Session Detail
 // Assignments
