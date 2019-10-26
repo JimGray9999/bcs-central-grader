@@ -1,9 +1,21 @@
 require('dotenv').config();
 const axios = require('axios');
 const baseUrl = 'https://www.bootcampspot.com/api/instructor/v1';
+const fs = require('fs');
 let authToken = '';
 let courseID = '';
 
+// function to write to a json the reponse data received
+function writeToFile (data, path) {  
+  const json = JSON.stringify(data, null, 2)
+  fs.writeFile(path, json, (err) => {
+    if (err) {
+      console.error(err)
+      throw err
+    }
+    console.log('Saved data to file.')
+  })
+}
 
 // Login to BCS
 axios.post(`${baseUrl}/login`, {
@@ -30,7 +42,13 @@ function getAboutMe() {
         console.log(`Your name is: ${response.data.userAccount.firstName} ${response.data.userAccount.lastName}`);
         console.log(`You have a total of ${response.data.enrollments.length} cohorts`);
         
-        
+        //TODO save specific fields
+        // profile of the user
+        // list of cohorts
+        // student ids
+        writeToFile(response.data, 'mynewfile.json');
+
+      
         // for (let i = 0; i < response.data.enrollments.length; i++) {
         //     console.log(`Cohort ${i+1}: ${response.data.enrollments[i].course.cohort.program.name}`); 
         //     console.log(`End Date: ${response.data.enrollments[i].course.cohort.endDate}`);
@@ -38,7 +56,7 @@ function getAboutMe() {
 
         courseID = response.data.enrollments[0].courseId;
         getGrades(courseID);
-        gradeFeeback(54820, 41681);
+        gradeFeeback(62650, 42541);
 
       })
     .catch(function (error) {
@@ -91,6 +109,7 @@ function gradeFeeback(assignmentID, studentID) {
     console.log("Assignment: " + response.data.assignment.title);
     console.log("Student: " + response.data.submission.student.firstName);
     console.log("Grade: " + response.data.submission.submissionGrade.grade);
+    console.log("Comment total: " + response.data.submission.submissionCommentList.length);
     console.log("Comment: " + response.data.submission.submissionCommentList[0].comment);
     console.log("Grade Author: " + response.data.submission.submissionCommentList[0].author.firstName);
   })
