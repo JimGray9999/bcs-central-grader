@@ -34,6 +34,8 @@ function mainMenu() {
     choices
   };
 
+  getAboutMe();
+
   inquirer
   .prompt([question])
   .then(({menuChoice}) => {
@@ -73,7 +75,6 @@ function login() {
     })
     .then(function (response) {
       authToken = response.data.authenticationInfo.authToken;
-      getAboutMe();
       resolve();
     })
     .catch(function (error) {
