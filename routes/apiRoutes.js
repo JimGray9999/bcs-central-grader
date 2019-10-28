@@ -1,56 +1,25 @@
 require('dotenv').config();
 const axios = require('axios');
+const router = require("express").Router();
+
 const baseUrl = 'https://www.bootcampspot.com/api/instructor/v1';
 const fs = require('fs');
-const inquirer = require('inquirer');
 let authToken = '';
 let courseID = '';
 
-function init() {
-  login()
-    .then(mainMenu());
-}
 
-function mainMenu() {
-  const choices = [
-    {
-      name: 'Show list of cohorts',
-      value: 'cohorts'
-    },
-    {
-      name: 'Show ungraded assignments',
-      value: 'ungraded'
-    },
-    {
-      name: 'Exit BCS Central Grader',
-      value: 'Exit'
-    }
-  ]
-
-  const question = {
-    type: 'rawlist',
-    name: 'menuChoice',
-    message: 'What would you like to do?',
-    choices
-  };
-
-  inquirer
-  .prompt([question])
-  .then(({menuChoice}) => {
-    switch (menuChoice) {
-      case 'cohorts':
-          break;
-      case 'ungraded':
-          break;
-      case 'exit':
-          process.exit();
-      default:
-        console.log("...I'm not sure what you are looking for.");
-        mainMenu();
-    }
-  });
-}
-
+router.get('/login', (req, res) => {
+    axios
+        .post(`${baseUrl}/login`, {
+            email: process.env.USERNAME,
+            password: process.env.PASSWORD
+        })
+        .then(function (response) {
+            authToken = response.data.authenticationInfo.authToken;
+            getAboutMe();
+        })
+        .catch(err => res.status(422).json(err));
+});
 
 // function to write to a json the reponse data received
 function writeToFile (data, path) {  
@@ -65,24 +34,17 @@ function writeToFile (data, path) {
 }
 
 // Login to BCS
-function login() {
-  return new Promise((resolve, reject) => {
-    axios.post(`${baseUrl}/login`, {
-      email: process.env.USERNAME,
-      password: process.env.PASSWORD
-    })
-    .then(function (response) {
-      authToken = response.data.authenticationInfo.authToken;
-      getAboutMe();
-      resolve();
-    })
-    .catch(function (error) {
-      console.log(error);
-      reject();
-    });
+axios.post(`${baseUrl}/login`, {
+    email: process.env.USERNAME,
+    password: process.env.PASSWORD
+  })
+  .then(function (response) {
+    authToken = response.data.authenticationInfo.authToken;
+    getAboutMe();
+  })
+  .catch(function (error) {
+    console.log(error);
   });
-}
-
 
 // About Me
 function getAboutMe() {
@@ -93,15 +55,14 @@ function getAboutMe() {
         }
     })
     .then(function (response) {
-        console.log(`Welcome to BCS Central Grader ${response.data.userAccount.firstName} ${response.data.userAccount.lastName}`);
+        console.log(`Your name is: ${response.data.userAccount.firstName} ${response.data.userAccount.lastName}`);
         console.log(`You have a total of ${response.data.enrollments.length} cohorts`);
         
         //TODO save specific fields
         // profile of the user
         // list of cohorts
         // student ids
-        writeToFile(response.data, 'loginPayload.json');
-        writeToFile(response.data.enrollments, 'enrollments.json');
+        writeToFile(response.data, 'mynewfile.json');
 
       
         // for (let i = 0; i < response.data.enrollments.length; i++) {
@@ -173,7 +134,7 @@ function gradeFeeback(assignmentID, studentID) {
   });
 }
 
-init();
+module.exports = router;
 
 // TODO functions for the different API requests needed
 // Sessions
