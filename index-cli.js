@@ -12,7 +12,7 @@ function init() {
 }
 
   
-let cohortInfo = [];
+let cohortInfo;
 
 let cohortQuestion = {
   type: 'rawlist',
@@ -75,8 +75,15 @@ function writeToFile (data, path) {
       console.error(err)
       throw err
     }
-    console.log('Saved data to file.')
   })
+}
+
+function readAFile (path) {
+  fs.readFileSync(path, (err, data) => {
+    if (err) throw err;
+    console.log(data);
+    return JSON.parse(data);
+  });
 }
 
 // Login to BCS
@@ -88,6 +95,7 @@ function login() {
     })
     .then(function (response) {
       authToken = response.data.authenticationInfo.authToken;
+      getCohortList();
       resolve();
     })
     .catch(function (error) {
@@ -97,31 +105,34 @@ function login() {
   });
 }
 
-function cohortsMenu() {
-  getCohortList();
-  inquirer.prompt([cohortQuestion])
-  .then(({menuChoice}) => {
-      console.log(`TODO: Do something with cohort choice ${menuChoice} here.`);
-      mainMenu();
-  })
-}
-
 function getCohortList() {
-  axios.get(`${baseUrl}/me`, {
-    headers: {
-        'Content-Type': 'application/json',
-        'authToken': authToken
-    }
-  })
-  .then(function (response) {
-      for (let i = 0; i < response.data.enrollments.length; i++) {
-        cohortInfo.push(
-            {'Cohort Name': response.data.enrollments[i].course.cohort.program.name,
-            'value': response.data.enrollments[i].course.cohortId
-            }
-        )
+    let cohortArray = [];
+    axios.get(`${baseUrl}/me`, {
+      headers: {
+          'Content-Type': 'application/json',
+          'authToken': authToken
       }
     })
-  }
+    .then(function (response) {
+        for (let i = 0; i < response.data.enrollments.length; i++) {
+          cohortArray.push(
+              {'Cohort Name': response.data.enrollments[i].course.cohort.program.name,
+              'value': response.data.enrollments[i].course.cohortId
+              }
+          )
+        }
+        writeToFile(cohortArray, './cohorts.json');
+        cohortInfo = readAFile('./cohorts.json');
+      })
+}
+
+function cohortsMenu() {
+  console.log(cohortInfo);
+  // inquirer.prompt([cohortQuestion])
+  // .then(({menuChoice}) => {
+  //     console.log(`TODO: Do something with cohort choice ${menuChoice} here.`);
+  //     mainMenu();
+  // })
+}
 
 init();
