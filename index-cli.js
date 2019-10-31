@@ -11,6 +11,16 @@ function init() {
     .then(mainMenu());
 }
 
+  
+let cohortInfo = [];
+
+let cohortQuestion = {
+  type: 'rawlist',
+  name: 'menuChoice',
+  message: 'Select a cohort',
+  cohortInfo
+}
+
 function mainMenu() {
   const choices = [
     {
@@ -39,17 +49,17 @@ function mainMenu() {
   .then(({menuChoice}) => {
     switch (menuChoice) {
       case 'cohorts':
-        console.log("TODO: Show all cohorts here.");
-        mainMenu();
+        cohortsMenu();
         break;
       case 'ungraded':
         console.log("TODO: Show all ungraded assignments here.");
         mainMenu();
         break;
       case 'exit':
-          process.exit();
+        process.exit();
       default:
         console.log("...I'm not sure what you are looking for.");
+        console.log(`Auth token: ${authToken}`);
         mainMenu();
     }
   });
@@ -86,5 +96,32 @@ function login() {
     });
   });
 }
+
+function cohortsMenu() {
+  getCohortList();
+  inquirer.prompt([cohortQuestion])
+  .then(({menuChoice}) => {
+      console.log(`TODO: Do something with cohort choice ${menuChoice} here.`);
+      mainMenu();
+  })
+}
+
+function getCohortList() {
+  axios.get(`${baseUrl}/me`, {
+    headers: {
+        'Content-Type': 'application/json',
+        'authToken': authToken
+    }
+  })
+  .then(function (response) {
+      for (let i = 0; i < response.data.enrollments.length; i++) {
+        cohortInfo.push(
+            {'Cohort Name': response.data.enrollments[i].course.cohort.program.name,
+            'value': response.data.enrollments[i].course.cohortId
+            }
+        )
+      }
+    })
+  }
 
 init();
