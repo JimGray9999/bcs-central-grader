@@ -1,26 +1,26 @@
 [
   {
-    "Cohort Name": "The Coding Boot Camp at UNC Charlotte - Charlotte Campus",
-    "value": 1202
+    "name": "The Coding Boot Camp at UNC Charlotte - Charlotte Campus",
+    "value": 322345
   },
   {
-    "Cohort Name": "Georgia Tech Coding Boot Camp - Atlanta Campus",
-    "value": 1158
+    "name": "Georgia Tech Coding Boot Camp - Atlanta Campus",
+    "value": 335471
   },
   {
-    "Cohort Name": "University of Richmond Coding Boot Camp - Richmond",
-    "value": 1050
+    "name": "University of Richmond Coding Boot Camp - Richmond",
+    "value": 335570
   },
   {
-    "Cohort Name": "The Data Analytics Boot Camp at UNC Charlotte - Charlotte Campus",
-    "value": 753
+    "name": "The Data Analytics Boot Camp at UNC Charlotte - Charlotte Campus",
+    "value": 262919
   },
   {
-    "Cohort Name": "The Coding Boot Camp at UNC Charlotte",
-    "value": 527
+    "name": "The Coding Boot Camp at UNC Charlotte",
+    "value": 262920
   },
   {
-    "Cohort Name": "The Coding Boot Camp at UNC Charlotte",
-    "value": 340
+    "name": "The Coding Boot Camp at UNC Charlotte",
+    "value": 262921
   }
 ]
