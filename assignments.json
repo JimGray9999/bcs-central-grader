@@ -1,0 +1,33 @@
+[
+  {
+    "id": 49307,
+    "courseId": 1603,
+    "contextId": 1,
+    "assignmentDate": "2019-10-24T04:00:00Z",
+    "dueDate": "2019-11-06T04:59:59Z",
+    "bufferDays": 0,
+    "effectiveDueDate": "2019-11-06T04:59:59Z",
+    "title": "11: Friend Finder - Node and Express Servers",
+    "required": true,
+    "requiredForGraduation": false,
+    "assignmentHeader": {
+      "id": 49308,
+      "assignmentId": 49307,
+      "header": "11: Friend Finder - Node and Express Servers"
+    },
+    "assignmentContent": null,
+    "assignmentHours": null,
+    "context": {
+      "id": 1,
+      "contextCode": "academic",
+      "name": "Academic"
+    },
+    "academicAssignment": {
+      "id": 49307,
+      "prework": false
+    },
+    "careerAssignment": null,
+    "submittedStudentCount": 13,
+    "gradedStudentCount": 9
+  }
+]

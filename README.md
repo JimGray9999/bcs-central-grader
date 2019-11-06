@@ -8,6 +8,19 @@ https://app.moqups.com/83pnXq1zws/view/page/aa9df7b72
 
 Build out as a CLI with Inquirer first, then as a React app
 
+Inquirer:
+    Login
+    Main Menu
+        List of my Cohorts
+            Show list of cohorts
+            Select a cohort
+                Current assignment
+                List of all assignments
+                
+        Ungraded Assignments
+        Refresh data (need to find a way to not need this step...)
+        Exit
+
 Login (doing automatically for now, then allowing for input)
 
 Dashboard

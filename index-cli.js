@@ -6,6 +6,7 @@ const inquirer = require('inquirer');
 let authToken = '';
 let courseID = '';
 let cohortInfo = [];
+let assignmentList = [];
 
 function init() {
   login()
@@ -130,24 +131,47 @@ function cohortsMenu() {
   
   inquirer.prompt([cohortQuestion])
   .then(({menuChoice}) => {
-      console.log(menuChoice);
       assignments(menuChoice);
-      mainMenu();
   })
 }
 
 function assignments(enrollmentId) {
-  console.log(authToken);
-  axios.post(`${baseUrl}/assignments`, {
-    // enrollmentId: enrollmentId,
+  axios({
+    method: 'post',
+    url: `https://www.bootcampspot.com/api/instructor/v1/assignments`,
     headers: {
-        'Content-Type': 'application/json',
-        'authToken': authToken
+      'Content-Type': 'application/json',
+      'authToken': authToken
+    },
+    data: {
+      enrollmentId: enrollmentId
     }
   })
   .then(function (response) {
-      console.log(response);
+      console.log(response.data.currentWeekAssignments.assignmentHeader);
+      response.data.currentWeekAssignments.forEach(assignment => {
+        assignmentList.push(assignment);
+      });
+      writeToFile(assignmentList, './assignments.json');
+      assignmentsMenu();
     })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
+function assignmentsMenu() {
+  let assignmentsQuestion = {
+    type: 'rawlist',
+    name: 'menuChoice',
+    message: 'Select an assignment',
+    choices: assignmentList
+  }
+  
+  inquirer.prompt([assignmentsQuestion])
+  .then(({menuChoice}) => {
+      console.log(menuChoice);
+  })
 }
 
 init();
