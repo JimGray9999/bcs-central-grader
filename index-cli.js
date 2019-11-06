@@ -64,7 +64,6 @@ function mainMenu() {
   
 }
 
-
 // function to write to a json the reponse data received
 function writeToFile (data, path) {  
   const json = JSON.stringify(data, null, 2)
@@ -131,14 +130,16 @@ function cohortsMenu() {
   
   inquirer.prompt([cohortQuestion])
   .then(({menuChoice}) => {
+      console.log(menuChoice);
       assignments(menuChoice);
       mainMenu();
   })
 }
 
 function assignments(enrollmentId) {
+  console.log(authToken);
   axios.post(`${baseUrl}/assignments`, {
-    "enrollmentId": enrollmentId,
+    // enrollmentId: enrollmentId,
     headers: {
         'Content-Type': 'application/json',
         'authToken': authToken
