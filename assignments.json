@@ -1,94 +1,90 @@
 [
   {
-    "name": "0: Web Development Prework",
-    "value": 54820
+    "name": "0: Data Prework",
+    "value": 38990
   },
   {
-    "name": "1: Building a Wireframe / That Portfolio Though",
-    "value": 54821
+    "name": "1: Excel Homework",
+    "value": 39000
   },
   {
-    "name": "2: Responsiveness Assignment",
-    "value": 54816
+    "name": "2: Visual Basic Homework",
+    "value": 38989
   },
   {
-    "name": "3: JavaScript Assignment",
-    "value": 54803
+    "name": "3: Python Homework",
+    "value": 39006
   },
   {
-    "name": "4: jQuery Assignment",
-    "value": 54804
+    "name": "4: Pandas Homework",
+    "value": 39005
   },
   {
-    "name": "5: JavaScript Assignment 2",
-    "value": 54805
-  },
-  {
-    "name": "6: GifTastic",
-    "value": 54806
-  },
-  {
-    "name": "7: Train Scheduler (Basic - Recommended) / Rock Paper Scissors (Challenge)",
-    "value": 54799
+    "name": "5: Matplotlib Homework",
+    "value": 39004
   },
   {
     "name": "Project 1",
-    "value": 54800
+    "value": 39002
   },
   {
-    "name": "Updated Portfolio Page",
-    "value": 54801
+    "name": "6: Python APIs Homework",
+    "value": 39003
   },
   {
-    "name": "8: LIRI Bot",
-    "value": 54802
+    "name": "7: SQL Homework",
+    "value": 39001
   },
   {
-    "name": "9: Advanced JavaScript Assignment: Constructor Word Guess",
-    "value": 54811
+    "name": "8: SQLAlchemy Homework",
+    "value": 38999
   },
   {
-    "name": "10: Node.js & MySQL",
-    "value": 54812
+    "name": "9: HTML and CSS Homework",
+    "value": 38998
   },
   {
-    "name": "11: Friend Finder - Node and Express Servers",
-    "value": 54813
+    "name": "11: JavaScript Homework",
+    "value": 38995
   },
   {
-    "name": "12: Node Express Handlebars",
-    "value": 54814
+    "name": "12: Plotly Homework",
+    "value": 38994
   },
   {
-    "name": "13: Burger 2: The Sequel",
-    "value": 54807
+    "name": "13: D3.js Homework",
+    "value": 38993
   },
   {
-    "name": "Updated Portfolio Page #2",
-    "value": 54809
+    "name": "14: Geo-Mapping Homework",
+    "value": 38992
+  },
+  {
+    "name": "ETL Project",
+    "value": 38996
   },
   {
     "name": "Project 2",
-    "value": 54808
+    "value": 38991
   },
   {
-    "name": "14: All the News That's Fit to Scrape",
-    "value": 54810
+    "name": "15: Tableau Homework",
+    "value": 38988
   },
   {
-    "name": "15: Clicky Game",
-    "value": 54815
+    "name": "Machine Learning Homework",
+    "value": 52958
   },
   {
-    "name": "16: Google Books React Search",
-    "value": 54817
+    "name": "Big Data Homework",
+    "value": 52957
   },
   {
-    "name": "17: Regionalized HW",
-    "value": 54818
+    "name": "10: Web Scraping and Mongo Homework",
+    "value": 38997
   },
   {
-    "name": "Project 3",
-    "value": 54819
+    "name": "Final Project",
+    "value": 38987
   }
 ]

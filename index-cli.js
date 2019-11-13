@@ -3,6 +3,7 @@ const axios = require('axios');
 const baseUrl = 'https://www.bootcampspot.com/api/instructor/v1';
 const fse = require('fse');
 const inquirer = require('inquirer');
+const _ = require('lodash');
 let authToken = '';
 let courseID = '';
 let cohortInfo = [];
@@ -82,6 +83,11 @@ function readAFile (path) {
     console.log(data);
     return JSON.parse(data);
   });
+}
+
+function searchFile () {
+  // TODO use lodash to search a JSON file for a result
+  // https://lodash.com/docs/4.17.15#find
 }
 
 // Login to BCS
@@ -178,6 +184,10 @@ function assignmentsMenu() {
   inquirer.prompt([assignmentsQuestion])
   .then(({menuChoice}) => {
       console.log(menuChoice);
+
+      console.log(_.find(assignmentList, function(o) {
+        return o.assignmentId = menuChoice;
+      }))
       // TODO read the file and search for the assignmentID
       // TODO show the number of assignments graded
       // TODO show the deadline
