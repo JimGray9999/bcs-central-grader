@@ -93,6 +93,7 @@ function login() {
     })
     .then(function (response) {
       authToken = response.data.authenticationInfo.authToken;
+      getCohortList();
       resolve();
     })
     .catch(function (error) {
@@ -148,13 +149,16 @@ function assignments(enrollmentId) {
     }
   })
   .then(function (response) {
-      for (let i = 0; i < response.data.currentWeekAssignments.length; i++) {
-        assignmentList.push(
-          {
-            'name': response.data.currentWeekAssignments[i].assignmentHeader.header,
-            'value': response.data.currentWeekAssignments[i].assignmentHeader.assignmentId
-          }
-        )}
+      console.log(response.data.calendarAssignments);
+      for (let i = 0; i < response.data.calendarAssignments.length; i++) {
+        if(response.data.calendarAssignments[i].context.contextCode == 'academic'){
+          assignmentList.push(
+            {
+              'name': response.data.calendarAssignments[i].assignmentHeader.header,
+              'value': response.data.calendarAssignments[i].assignmentHeader.assignmentId
+            })
+        }
+      }
       writeToFile(assignmentList, './assignments.json');
       assignmentsMenu();
     })
@@ -174,6 +178,9 @@ function assignmentsMenu() {
   inquirer.prompt([assignmentsQuestion])
   .then(({menuChoice}) => {
       console.log(menuChoice);
+      // TODO read the file and search for the assignmentID
+      // TODO show the number of assignments graded
+      // TODO show the deadline
   })
 }
 

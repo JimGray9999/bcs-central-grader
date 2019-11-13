@@ -1,6 +1,94 @@
 [
   {
+    "name": "0: Web Development Prework",
+    "value": 54820
+  },
+  {
+    "name": "1: Building a Wireframe / That Portfolio Though",
+    "value": 54821
+  },
+  {
+    "name": "2: Responsiveness Assignment",
+    "value": 54816
+  },
+  {
+    "name": "3: JavaScript Assignment",
+    "value": 54803
+  },
+  {
+    "name": "4: jQuery Assignment",
+    "value": 54804
+  },
+  {
+    "name": "5: JavaScript Assignment 2",
+    "value": 54805
+  },
+  {
+    "name": "6: GifTastic",
+    "value": 54806
+  },
+  {
+    "name": "7: Train Scheduler (Basic - Recommended) / Rock Paper Scissors (Challenge)",
+    "value": 54799
+  },
+  {
+    "name": "Project 1",
+    "value": 54800
+  },
+  {
+    "name": "Updated Portfolio Page",
+    "value": 54801
+  },
+  {
+    "name": "8: LIRI Bot",
+    "value": 54802
+  },
+  {
+    "name": "9: Advanced JavaScript Assignment: Constructor Word Guess",
+    "value": 54811
+  },
+  {
+    "name": "10: Node.js & MySQL",
+    "value": 54812
+  },
+  {
     "name": "11: Friend Finder - Node and Express Servers",
-    "value": 49307
+    "value": 54813
+  },
+  {
+    "name": "12: Node Express Handlebars",
+    "value": 54814
+  },
+  {
+    "name": "13: Burger 2: The Sequel",
+    "value": 54807
+  },
+  {
+    "name": "Updated Portfolio Page #2",
+    "value": 54809
+  },
+  {
+    "name": "Project 2",
+    "value": 54808
+  },
+  {
+    "name": "14: All the News That's Fit to Scrape",
+    "value": 54810
+  },
+  {
+    "name": "15: Clicky Game",
+    "value": 54815
+  },
+  {
+    "name": "16: Google Books React Search",
+    "value": 54817
+  },
+  {
+    "name": "17: Regionalized HW",
+    "value": 54818
+  },
+  {
+    "name": "Project 3",
+    "value": 54819
   }
 ]
