@@ -16,10 +16,12 @@ Inquirer:
             Select a cohort
                 Current assignment
                 List of all assignments
-                
+
         Ungraded Assignments
         Refresh data (need to find a way to not need this step...)
         Exit
+
+App:
 
 Login (doing automatically for now, then allowing for input)
 
@@ -35,3 +37,7 @@ Grades
     List:
         Grade, Cohort, Student, Assignmemnt, Feedback, Date of Grade, Date of most recent feedback,
         feedback total
+
+Next Steps
+    Ability to grade from this app
+    Pull in common comments to insert into the text field

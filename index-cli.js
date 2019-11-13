@@ -148,10 +148,13 @@ function assignments(enrollmentId) {
     }
   })
   .then(function (response) {
-      console.log(response.data.currentWeekAssignments.assignmentHeader);
-      response.data.currentWeekAssignments.forEach(assignment => {
-        assignmentList.push(assignment);
-      });
+      for (let i = 0; i < response.data.currentWeekAssignments.length; i++) {
+        assignmentList.push(
+          {
+            'name': response.data.currentWeekAssignments[i].assignmentHeader.header,
+            'value': response.data.currentWeekAssignments[i].assignmentHeader.assignmentId
+          }
+        )}
       writeToFile(assignmentList, './assignments.json');
       assignmentsMenu();
     })
