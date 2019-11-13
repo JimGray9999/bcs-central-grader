@@ -1,0 +1,479 @@
+{
+  "userAccount": {
+    "id": 14592,
+    "userName": "jimgray2005+ta@gmail.com",
+    "firstName": "Jim",
+    "lastName": "Gray",
+    "email": "jimgray2005+ta@gmail.com",
+    "githubUserName": "jimgray9999",
+    "phoneNumber": null,
+    "avatarUrl": null,
+    "mailingLogoUrl": null,
+    "passwordResetRequired": false,
+    "active": true,
+    "bcsExtends": {
+      "id": 14592,
+      "isAdmin": false,
+      "jobTrackActive": false
+    },
+    "nexusAvatarUrl": null
+  },
+  "enrollments": [
+    {
+      "id": 322345,
+      "courseId": 1989,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 1989,
+        "cohortId": 1202,
+        "name": "UNC-CHA-FSF-PT-10-2019-U-C-TTH",
+        "code": "UNC-CHA-FSF-PT-10-2019-U-C-TTH",
+        "startDate": "2019-10-08T04:00:00Z",
+        "endDate": "2020-04-04T04:00:00Z",
+        "duration": null,
+        "location": "Room 502 UNCC Center City",
+        "endSurveyEnabled": false,
+        "cohort": {
+          "id": 1202,
+          "programId": 261,
+          "name": "UNC-CHA-FSF-PT-10-2019-U-C",
+          "startDate": "2019-10-08T04:00:00Z",
+          "endDate": "2020-04-04T04:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 261,
+            "name": "The Coding Boot Camp at UNC Charlotte - Charlotte Campus",
+            "university": {
+              "id": 53,
+              "name": "UNC Charlotte",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWFP&oid=00D410000006puJ&lastMod=1527712478000"
+            },
+            "programType": {
+              "id": 1004,
+              "name": "Full Stack Flex Part-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 1202,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 4,
+          "maxRemoteAttendance": 4,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2857325,
+        "courseId": 1989,
+        "survey": "mid-course",
+        "dateFrom": "2019-12-30T00:00:00Z",
+        "dateTo": "2020-01-05T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2857326,
+        "courseId": 1989,
+        "survey": "end-course",
+        "dateFrom": "2020-03-28T04:00:00Z",
+        "dateTo": "2020-04-18T04:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    },
+    {
+      "id": 335471,
+      "courseId": 1946,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 1946,
+        "cohortId": 1158,
+        "name": "GT-ATL-FSF-FT-10-2019-U-C-M-F",
+        "code": "GT-ATL-FSF-FT-10-2019-U-C-M-F",
+        "startDate": "2019-10-07T04:00:00Z",
+        "endDate": "2020-01-10T05:00:00Z",
+        "duration": null,
+        "location": "Global Learning Center\r\n3rd Floor\r\nRoom Number: TBD",
+        "endSurveyEnabled": false,
+        "cohort": {
+          "id": 1158,
+          "programId": 271,
+          "name": "GT-ATL-FSF-FT-10-2019-U-C",
+          "startDate": "2019-10-07T04:00:00Z",
+          "endDate": "2020-01-15T05:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 271,
+            "name": "Georgia Tech Coding Boot Camp - Atlanta Campus",
+            "university": {
+              "id": 14,
+              "name": "Georgia Institute of Technology",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWGw&oid=00D410000006puJ&lastMod=1527713010000"
+            },
+            "programType": {
+              "id": 1003,
+              "name": "Full Stack Flex Full-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 1158,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 3,
+          "maxRemoteAttendance": 2,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2863060,
+        "courseId": 1946,
+        "survey": "mid-course",
+        "dateFrom": "2019-11-18T00:00:00Z",
+        "dateTo": "2019-11-24T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2863061,
+        "courseId": 1946,
+        "survey": "end-course",
+        "dateFrom": "2020-01-03T05:00:00Z",
+        "dateTo": "2020-01-24T05:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    },
+    {
+      "id": 335570,
+      "courseId": 1603,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 1603,
+        "cohortId": 1050,
+        "name": "UR-RICH-FSF-PT-07-2019-U-C-TTH",
+        "code": "UR-RICH-FSF-PT-07-2019-U-C-TTH",
+        "startDate": "2019-07-30T04:00:00Z",
+        "endDate": "2020-01-28T05:00:00Z",
+        "duration": null,
+        "location": "TBC",
+        "endSurveyEnabled": false,
+        "cohort": {
+          "id": 1050,
+          "programId": 404,
+          "name": "UR-RICH-FSF-PT-07-2019-U-C",
+          "startDate": "2019-07-30T04:00:00Z",
+          "endDate": "2020-01-28T05:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 404,
+            "name": "University of Richmond Coding Boot Camp - Richmond",
+            "university": {
+              "id": 73,
+              "name": "University of Richmond",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWSJ&oid=00D410000006puJ&lastMod=1527719608000"
+            },
+            "programType": {
+              "id": 1004,
+              "name": "Full Stack Flex Part-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 1050,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 4,
+          "maxRemoteAttendance": 4,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2802716,
+        "courseId": 1603,
+        "survey": "mid-course",
+        "dateFrom": "2019-10-28T00:00:00Z",
+        "dateTo": "2019-11-03T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2802717,
+        "courseId": 1603,
+        "survey": "end-course",
+        "dateFrom": "2020-01-21T05:00:00Z",
+        "dateTo": "2020-02-11T05:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    },
+    {
+      "id": 262919,
+      "courseId": 1061,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 1061,
+        "cohortId": 753,
+        "name": "UNCCLT20190305DATA",
+        "code": "UNCCLT20190305DATA",
+        "startDate": "2019-03-05T05:00:00Z",
+        "endDate": "2019-08-22T04:00:00Z",
+        "duration": null,
+        "location": "Room 506",
+        "endSurveyEnabled": true,
+        "cohort": {
+          "id": 753,
+          "programId": 277,
+          "name": "UNCCLT201903DATA2",
+          "startDate": "2019-03-05T05:00:00Z",
+          "endDate": "2019-08-22T04:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 277,
+            "name": "The Data Analytics Boot Camp at UNC Charlotte - Charlotte Campus",
+            "university": {
+              "id": 53,
+              "name": "UNC Charlotte",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWFP&oid=00D410000006puJ&lastMod=1527712478000"
+            },
+            "programType": {
+              "id": 1009,
+              "name": "Data Visualization Part-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 753,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 4,
+          "maxRemoteAttendance": 4,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2865237,
+        "courseId": 1061,
+        "survey": "mid-course",
+        "dateFrom": "2019-05-27T00:00:00Z",
+        "dateTo": "2019-06-02T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2865238,
+        "courseId": 1061,
+        "survey": "end-course",
+        "dateFrom": "2019-08-15T04:00:00Z",
+        "dateTo": "2019-09-05T04:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    },
+    {
+      "id": 262920,
+      "courseId": 812,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 812,
+        "cohortId": 527,
+        "name": "UNCHAR20180917FSF",
+        "code": "UNCHAR20180917FSF",
+        "startDate": "2018-09-18T04:00:00Z",
+        "endDate": "2019-03-21T04:00:00Z",
+        "duration": null,
+        "location": "tbc",
+        "endSurveyEnabled": true,
+        "cohort": {
+          "id": 527,
+          "programId": 185,
+          "name": "UNCHAR201809FSF3",
+          "startDate": "2018-09-17T04:00:00Z",
+          "endDate": "2019-03-30T04:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 185,
+            "name": "The Coding Boot Camp at UNC Charlotte",
+            "university": {
+              "id": 53,
+              "name": "UNC Charlotte",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWFP&oid=00D410000006puJ&lastMod=1527712478000"
+            },
+            "programType": {
+              "id": 1004,
+              "name": "Full Stack Flex Part-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 527,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 4,
+          "maxRemoteAttendance": 4,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2726777,
+        "courseId": 812,
+        "survey": "mid-course",
+        "dateFrom": "2018-12-17T00:00:00Z",
+        "dateTo": "2018-12-23T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2726778,
+        "courseId": 812,
+        "survey": "end-course",
+        "dateFrom": "2019-03-14T04:00:00Z",
+        "dateTo": "2019-04-04T04:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    },
+    {
+      "id": 262921,
+      "courseId": 412,
+      "userAccountId": 14592,
+      "courseRoleId": 4,
+      "active": true,
+      "course": {
+        "id": 412,
+        "cohortId": 340,
+        "name": "UNCHAR20180306FSF",
+        "code": "UNCHAR20180306FSF",
+        "startDate": "2018-03-06T05:00:00Z",
+        "endDate": "2018-08-25T04:00:00Z",
+        "duration": null,
+        "location": "UNC Charlotte City Center \r\n320 E 9th St.\r\nCharlotte, NC 28202",
+        "endSurveyEnabled": false,
+        "cohort": {
+          "id": 340,
+          "programId": 185,
+          "name": "UNCHAR201803FSF1",
+          "startDate": "2018-03-06T05:00:00Z",
+          "endDate": "2018-08-25T04:00:00Z",
+          "division": "University",
+          "program": {
+            "id": 185,
+            "name": "The Coding Boot Camp at UNC Charlotte",
+            "university": {
+              "id": 53,
+              "name": "UNC Charlotte",
+              "logoUrl": "https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWFP&oid=00D410000006puJ&lastMod=1527712478000"
+            },
+            "programType": {
+              "id": 1004,
+              "name": "Full Stack Flex Part-Time",
+              "active": true
+            }
+          },
+          "cohortUiControl": {
+            "id": 340,
+            "hideRemoteAttendance": false,
+            "hideBilling": false,
+            "hideExtendDueDate": false,
+            "hideCareerServices": false,
+            "hideLiveChat": false,
+            "hideWebToCase": false
+          }
+        },
+        "graduationRequirements": {
+          "maxAbsence": 4,
+          "maxRemoteAttendance": 4,
+          "maxMissedGeneralAssignment": 2,
+          "maxMissedRequiredAssignment": 0
+        }
+      },
+      "courseRole": {
+        "id": 4,
+        "courseRoleCode": "ta",
+        "name": "TA"
+      },
+      "midCourseSurveySchedule": {
+        "id": 2696538,
+        "courseId": 412,
+        "survey": "mid-course",
+        "dateFrom": "2018-05-28T00:00:00Z",
+        "dateTo": "2018-06-03T23:59:59Z"
+      },
+      "endCourseSurveySchedule": {
+        "id": 2696539,
+        "courseId": 412,
+        "survey": "end-course",
+        "dateFrom": "2018-08-18T04:00:00Z",
+        "dateTo": "2018-09-08T04:00:00Z"
+      },
+      "remoteAttendanceCount": 0,
+      "pendingRemoteAttendanceRequestCount": 0
+    }
+  ]
+}
