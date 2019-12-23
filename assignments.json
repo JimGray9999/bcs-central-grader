@@ -1,90 +1,94 @@
 [
   {
-    "name": "0: Data Prework",
-    "value": 38990
+    "name": "0: Web Development Prework",
+    "value": 56587
   },
   {
-    "name": "1: Excel Homework",
-    "value": 39000
+    "name": "1: Portfolio",
+    "value": 56589
   },
   {
-    "name": "2: Visual Basic Homework",
-    "value": 38989
+    "name": "2: Responsive Portfolio",
+    "value": 56567
   },
   {
-    "name": "3: Python Homework",
-    "value": 39006
+    "name": "3: Password Generator",
+    "value": 56575
   },
   {
-    "name": "4: Pandas Homework",
-    "value": 39005
+    "name": "4: Code Quiz",
+    "value": 56578
   },
   {
-    "name": "5: Matplotlib Homework",
-    "value": 39004
+    "name": "5: Day Planner",
+    "value": 56577
+  },
+  {
+    "name": "6: Weather Dashboard",
+    "value": 56582
   },
   {
     "name": "Project 1",
-    "value": 39002
+    "value": 56581
   },
   {
-    "name": "6: Python APIs Homework",
-    "value": 39003
+    "name": "Updated Portfolio Page",
+    "value": 56580
   },
   {
-    "name": "7: SQL Homework",
-    "value": 39001
+    "name": "9: Developer Profile Generator",
+    "value": 56579
   },
   {
-    "name": "8: SQLAlchemy Homework",
-    "value": 38999
+    "name": "10: Team Profile Generator",
+    "value": 56588
   },
   {
-    "name": "9: HTML and CSS Homework",
-    "value": 38998
+    "name": "11: Note Taker",
+    "value": 56584
   },
   {
-    "name": "11: JavaScript Homework",
-    "value": 38995
+    "name": "12: Employee Management System",
+    "value": 56583
   },
   {
-    "name": "12: Plotly Homework",
-    "value": 38994
+    "name": "13: Node Express Handlebars",
+    "value": 56586
   },
   {
-    "name": "13: D3.js Homework",
-    "value": 38993
-  },
-  {
-    "name": "14: Geo-Mapping Homework",
-    "value": 38992
-  },
-  {
-    "name": "ETL Project",
-    "value": 38996
+    "name": "14: Reverse Engineering Authentication",
+    "value": 56585
   },
   {
     "name": "Project 2",
-    "value": 38991
+    "value": 56572
   },
   {
-    "name": "15: Tableau Homework",
-    "value": 38988
+    "name": "Updated Portfolio Page #2",
+    "value": 56571
   },
   {
-    "name": "Machine Learning Homework",
-    "value": 52958
+    "name": "17: Fitness Tracker",
+    "value": 56574
   },
   {
-    "name": "Big Data Homework",
-    "value": 52957
+    "name": "18: Progressive Budget",
+    "value": 56573
   },
   {
-    "name": "10: Web Scraping and Mongo Homework",
-    "value": 38997
+    "name": "19: User Directory",
+    "value": 56568
   },
   {
-    "name": "Final Project",
-    "value": 38987
+    "name": "20: The Store Store",
+    "value": 56570
+  },
+  {
+    "name": "21: Google Books React Search",
+    "value": 71126
+  },
+  {
+    "name": "Project 3",
+    "value": 56576
   }
 ]

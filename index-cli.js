@@ -2,6 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const baseUrl = 'https://www.bootcampspot.com/api/instructor/v1';
 const fse = require('fse');
+const path = require('path');
 const inquirer = require('inquirer');
 const _ = require('lodash');
 let authToken = '';
@@ -78,11 +79,7 @@ function writeToFile (data, path) {
 }
 
 function readAFile (path) {
-  fse.readFileSync(path, (err, data) => {
-    if (err) throw err;
-    console.log(data);
-    return JSON.parse(data);
-  });
+    return fse.readJson(path);
 }
 
 function searchFile () {
@@ -183,11 +180,13 @@ function assignmentsMenu() {
   
   inquirer.prompt([assignmentsQuestion])
   .then(({menuChoice}) => {
-      console.log(menuChoice);
 
-      console.log(_.find(assignmentList, function(o) {
+      console.log(fse.readJson(path.join(__dirname, 'assignments.json')));
+      console.log(_.find(useFile, function(o) {
         return o.assignmentId = menuChoice;
       }))
+
+      
       // TODO read the file and search for the assignmentID
       // TODO show the number of assignments graded
       // TODO show the deadline
